@@ -1,0 +1,97 @@
+textarea { resize:none; }
+//colors
+$quartz: #3E83FF;
+$white: #fff;
+$background_color_form: #e8e8e8;
+//fonts
+$font_0: Heebo;
+$font_color: #7a7a7a;
+
+@mixin basic_style {
+	font-family: $font_0;
+	font-weight: 500;	
+	font-size: 1.2em;
+	min-width: 100px !important;
+	max-width: 200px !important;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: $white;
+	opacity: 1 !important;
+}
+
+.container-fluid{
+	box-shadow: 0px 0px 1px 0px;
+}
+
+label{
+    color: $font_color;
+    font-size: 14px;
+    font-weight: 400;
+}
+:host  ::ng-deep {
+	mat-tab-header {
+		background-color: $white;
+	}
+	.mat-tab-label {
+		padding: 0px !important;
+		font-weight: 400;
+		width: 20px;
+		a {
+			@include basic_style;
+			padding: 10px 20px 12px 20px;
+		}
+		:active {			
+			@include basic_style;
+		}
+	}
+	.mat-ink-bar {
+		background-color: $quartz !important;
+	}
+	.mat-tab-label-active {
+		color: $white;
+		padding: 0px !important;
+		opacity: 1 !important;
+        background-color:$quartz;
+	}
+}
+
+ ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background{
+    background-color: rgba(63,81,181,0.87);
+}
+
+
+::ng-deep .mat-form-field-infix {
+    border-top: none;
+}
+
+p {
+	margin: 15px;
+}
+
+.mat-divider {
+	margin: -35px;
+}
+
+.sign-in {
+	margin: 10px 0px 0px 0px;
+}
+
+.start-btn {
+	background-color: #3E83FF;
+	color: white;
+	height: 35.5px;
+	font-size: 16px;
+	font-family: $font_0;
+	font-weight: 600;
+	&:hover {
+		color: #3E83FF;
+		background-color: white;
+	}
+}
+
+input {
+	height: 35px;
+	border-top-right-radius:0;
+	border-bottom-right-radius:0;
+}

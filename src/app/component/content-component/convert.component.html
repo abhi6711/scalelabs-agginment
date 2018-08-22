@@ -1,0 +1,32 @@
+<div>
+    <mat-form-field>
+        <input matInput [(ngModel)]='sourceAmount' placeholder="Enter the amount">
+    </mat-form-field>
+    -
+    <mat-form-field>
+        <mat-select [(ngModel)]="sourceCurrency" placeholder="Select Currency">
+            <mat-option *ngFor="let keys of allCurrencies" [value]="keys">
+                {{keys}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <b>Convert To</b>
+    <mat-form-field>
+        <mat-select [(ngModel)]="destCurrency" placeholder="Select Currency">
+            <mat-option *ngFor="let keys of allCurrencies" [value]="keys">
+                {{keys}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div>
+    <button mat-button (click)="covertAmount()">Convert</button>
+</div>
+<div>
+    <label>
+        <b>Amount:</b>
+    </label>
+    <span class="amount">
+        {{outputAmount}}
+    </span>
+</div>

@@ -1,0 +1,28 @@
+//colors
+$quartz: #3E83FF;
+$white: #fff;
+
+//fonts
+$font_0: Heebo;
+
+button {
+    background: $quartz;
+    color: $white;
+    font-size: 16px;
+}
+
+::ng-deep .mat-dialog-container{
+    width: 60vw;
+}
+
+label {
+    margin: 20px 0px 0px 0px;
+}
+
+b {
+    margin: 0px 15px 0px 15px;
+}
+
+.amount {
+    color: $quartz;
+}

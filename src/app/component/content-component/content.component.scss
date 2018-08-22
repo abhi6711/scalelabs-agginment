@@ -1,0 +1,168 @@
+
+//colors
+$quartz: #3E83FF;
+$white: #fff;
+
+//fonts
+$font_0: Heebo;
+
+@mixin basic_style {
+	font-family: $font_0;
+	font-weight: 500;	
+	font-size: 1.2em;
+	min-width: 100px !important;
+	max-width: 200px !important;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	opacity: 1 !important;
+	letter-spacing: 1.3px;
+}
+
+.divider {
+	margin: 20px 0px 0px 0px;
+}
+
+#title {
+	align-content: center;
+}
+
+.logo {
+	margin: 80px auto auto auto;
+	display: block;
+	position: relative;
+	width: 50%;
+}
+
+.price {
+	@include basic_style();
+	float: right;
+	color: $quartz;
+}
+
+.brand-name {
+	@include basic_style();
+	color: $quartz;
+}
+
+.buy {
+	color: $quartz;
+	cursor: pointer;
+}
+
+.material-icons {
+	margin-left: 12px;
+	color: $quartz;
+}
+
+.description {
+	@include basic_style();
+}
+
+.get-started {
+	color: #ff5fa1;
+	height: 30px;
+	font-family: $font_0;
+	font-size: 16px;
+	cursor: pointer;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.card {
+	margin-top: 20px;
+	box-shadow: #3E83FF;
+	cursor: pointer;
+	&:hover {
+		box-shadow: 1px1px 1px 1px grey;
+	}
+}
+
+.fa {
+	color: #ff5fa1;
+}
+
+.rw-wrapper{
+	width: 50%;
+	position: relative;
+	margin: 80px auto auto auto;
+	font-family: 'Bree Serif';
+	padding: 10px;
+}
+
+.rw-sentence{
+	margin: 0;
+	text-align: left;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	font-size: 22px;
+}
+
+.rw-sentence span{
+	color: #444;
+	white-space: nowrap;
+	font-weight: normal;
+}
+
+.rw-words{
+	@include basic_style();
+	display: inline;
+	text-indent: 10px;
+}
+
+.rw-words span{
+	position: absolute;
+	opacity: 0;
+	overflow: hidden;
+	color: #6b969d;
+}
+
+.rw-words-2 span{
+	animation: rotateWordsSecond 18s linear infinite 0s;
+}
+.rw-words span:nth-child(2) { 
+	animation-delay: 3s; 
+	color: #6b889d;
+}
+.rw-words span:nth-child(3) { 
+	animation-delay: 6s; 
+	color: #6b739d;	
+}
+.rw-words span:nth-child(4) { 
+	animation-delay: 9s; 
+	color: #7a6b9d;
+}
+.rw-words span:nth-child(5) { 
+	animation-delay: 12s; 
+	color: #8d6b9d;
+}
+.rw-words span:nth-child(6) {  
+	animation-delay: 15s; 
+	color: #9b6b9d;
+}
+
+@keyframes rotateWordsSecond {
+    0% { opacity: 1; animation-timing-function: ease-in; width: 0px; }
+    10% { opacity: 0.3; width: 0px; }
+	20% { opacity: 1; width: 50%; }
+    27% { opacity: 0; width: 50%; }
+    100% { opacity: 0; }
+}
+
+#question {
+	@include basic_style();
+	color: $quartz;
+}
+
+.start-btn {
+	background-color: #3E83FF;
+	color: white;
+	height: 35px;
+	font-size: 16px;
+	font-family: $font_0;
+	font-weight: 700;
+}
+
+input {
+	height: 34px;
+}

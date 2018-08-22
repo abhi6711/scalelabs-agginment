@@ -1,0 +1,35 @@
+//colors
+$quartz: #3E83FF;
+$white: #fff;
+
+//fonts
+$font_0: Heebo;
+
+@mixin basic_style {
+	font-family: $font_0;
+	font-weight: 500;	
+	font-size: 1.2em;
+	min-width: 100px !important;
+	max-width: 200px !important;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	opacity: 1 !important;
+	letter-spacing: 1.3px;
+}
+
+h1 {
+    @include basic_style();
+    margin: 20px;
+    color: $quartz;
+    font-weight:700;
+}
+
+p {
+    font-size:14px;
+}
+
+.office-name {
+    color: $quartz;
+    font-size: 16px;
+}

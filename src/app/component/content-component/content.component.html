@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12" id="title">
+            <img class="logo" src="assets/images/theshoecompany.png" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 offset-md-1" *ngFor="let keys of items">
+            <mat-card class="card">
+                <img mat-card-image src="assets/images/shoe.png">
+                <mat-card-content>
+                    <p class="brand-name">
+                        <b>{{keys.title}}</b>
+                    </p>
+                    <p class="description">
+                        {{keys.desc}}
+                    </p>
+                </mat-card-content>
+                <mat-divider></mat-divider>
+                <mat-card-actions>
+                    <p>
+                        <b class="buy">BUY</b>
+                        <i class="material-icons">
+                            add_shopping_cart
+                        </i>
+                        <i class="material-icons fa fa-hearto">
+                            favorite_border
+                        </i>
+                        <span class="price">{{keys.price}} <b class="get-started" (click)="openDialogBox()">Convert</b></span>
+                    </p>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <section class="rw-wrapper">
+                <h2 class="rw-sentence">
+                    <span id="question">Are you working in </span>
+                    <div class="rw-words rw-words-2">
+                        <span>Pricing?</span>
+                        <span>Merchandising?</span>
+                        <span>Buying?</span>
+                    </div>
+                </h2>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 offset-md-5">
+            <span class="email">
+                <input placeholder="Drop your email">
+                <button mat-button class="start-btn">Get Started</button>
+            </span>
+        </div>
+    </div>
+    <mat-divider class="divider"></mat-divider>
+</div>
